@@ -45,12 +45,12 @@ export default function TradeSimulator() {
       <input
         type="number"
         value={tradeParams.amount}
-        onChange={(e) => setTradeParams({...tradeParams, amount: parseFloat(e.target.value)})}
+        onChange={e => setTradeParams({ ...tradeParams, amount: parseFloat(e.target.value) })}
       />
 
       <select
         value={tradeParams.isBuy ? 'buy' : 'sell'}
-        onChange={(e) => setTradeParams({...tradeParams, isBuy: e.target.value === 'buy'})}
+        onChange={e => setTradeParams({ ...tradeParams, isBuy: e.target.value === 'buy' })}
       >
         <option value="buy">Buy</option>
         <option value="sell">Sell</option>
@@ -60,7 +60,7 @@ export default function TradeSimulator() {
         type="number"
         step="0.1"
         value={tradeParams.slippage}
-        onChange={e => setTradeParams({...tradeParams, slippage: parseFloat(e.target.value)})}
+        onChange={e => setTradeParams({ ...tradeParams, slippage: parseFloat(e.target.value) })}
       />
 
       <button onClick={handleSimulate} disabled={loading}>
