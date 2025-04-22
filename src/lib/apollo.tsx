@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql',
+  uri: 'https://solana-token-trading-bot-synesxi-be.vercel.app/graphql',
   cache: new InMemoryCache(),
   defaultOptions: {
     watchQuery: {
